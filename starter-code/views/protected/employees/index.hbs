@@ -1,0 +1,12 @@
+<h1>List of Users</h1>
+
+{{#each users}}
+{{displayName}}
+{{username}}
+{{role}}
+
+<form action="/protected/employees/{{id}}/delete" method="POST"> <button type="submit">Delete User</button> </form>
+
+{{/each}}
+
+<a href="/protected/employees/new">Add Employee/User</a>

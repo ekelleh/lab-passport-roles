@@ -1,0 +1,24 @@
+<h1>Add New User</h1>
+
+<form id="form" action="/protected/employees" method="post">
+  <h2>Register</h2>
+  <label for="username">Username</label>
+  <input type="text" name="username">
+
+  <label for="password">Password</label>
+  <input type="password" name="password">
+
+  <label for="role">Boss</label>
+  <input type="radio" name="role" value="Boss">
+  <label for="role">Developer</label>
+  <input type="radio" name="role" value="Developer">
+  <label for="role">TA</label>
+  <input type="radio" name="role" value="TA">
+
+  {{#if errorMessage}}
+  <div class="error-message">{{errorMessage}}</div>
+  {{/if}}
+
+  <button type="submit">Register</button>
+</form>
+<a href="/">Home</a>
